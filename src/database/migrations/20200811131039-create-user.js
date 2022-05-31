@@ -8,33 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      fullName: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
-      },
-      phone: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-      },
-      isPhoneVerified: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-        defaultValue: false,
-      },
-      phoneVerificationCode: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      isPhoneVerificationCodeSent: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
@@ -43,10 +20,6 @@ module.exports = {
       isActive: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
-        allowNull: false,
-      },
-      userType: {
-        type: Sequelize.INTEGER,
         allowNull: false,
       },
       createdAt: {

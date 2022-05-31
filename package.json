@@ -1,7 +1,7 @@
 {
-  "name": "node-api-sequelize",
+  "name": "toptal-project-backend",
   "version": "1.0.0",
-  "description": "Node server application",
+  "description": "Toptal backend",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && npm run serve",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Easybuoy/node-api-sequelize.git"
+    "url": "git+https://github.com/Easybuoy/toptal-project-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Easybuoy/node-api-sequelize/issues"
+    "url": "https://github.com/Easybuoy/toptal-project-backend/issues"
   },
-  "homepage": "https://github.com/Easybuoy/node-api-sequelize#readme",
+  "homepage": "https://github.com/Easybuoy/toptal-project-backend#readme",
   "dependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",

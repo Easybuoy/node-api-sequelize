@@ -20,7 +20,7 @@ app.use(helmet());
 app.use(xss());
 
 app.get("/", (req, res) => {
-  res.json({ status: "success", message: "Welcome to ELA API 👋🏾" });
+  res.json({ status: "success", message: "Welcome to Toptal API 👋🏾" });
 });
 
 app.use("/api/auth", authRoutes);

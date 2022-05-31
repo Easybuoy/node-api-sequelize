@@ -14,32 +14,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.myAssociation = this.hasOne(models.UserType, {
-        foreignKey: "type",
-        as: "usertypes",
-        sourceKey: "userType",
-        onDelete: "CASCADE",
-      });
-
-      this.myAssociation = this.hasMany(models.PasswordReset, {
-        foreignKey: "userId",
-        as: "passwordreset",
-        // sourceKey: "userId",
-        onDelete: "CASCADE",
-      });
     }
   }
   User.init(
     {
-      fullName: DataTypes.STRING,
       email: DataTypes.STRING,
-      phone: DataTypes.STRING,
-      isPhoneVerified: DataTypes.BOOLEAN,
-      phoneVerificationCode: DataTypes.INTEGER,
-      isPhoneVerificationCodeSent: DataTypes.BOOLEAN,
       password: DataTypes.STRING,
       isActive: DataTypes.BOOLEAN,
-      userType: DataTypes.INTEGER,
     },
     {
       sequelize,
@@ -65,10 +46,6 @@ module.exports = (sequelize, DataTypes) => {
   User.prototype.validatePassword = async function (password) {
     const isValid = await bcrypt.compareSync(password, this.password);
     return isValid;
-  };
-
-  User.prototype.validatePhoneVerificationCode = function (phoneCode) {
-    return this.phoneVerificationCode === parseInt(phoneCode);
   };
   return User;
 };
